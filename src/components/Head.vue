@@ -122,26 +122,29 @@ export default {
     }
   }
 </style>
-<style>
-  .search .ivu-select .ivu-select-selection {
-    background-color: #0066ff;
-    border-color: #0066ff;
-    color: #fff;
-  }
-  .search .ivu-select .ivu-select-arrow {
-    color: #fff;
-  }
-  .search input {
-    background-color: #2a4a98;
-    border-color: #0066ff;
-    color: #fff;
-  }
-
-  .search .ivu-input-group-append {
-    background-color: #0066ff;
-    border-color: #0066ff;
-    color: #fff;
-    cursor: pointer;
+<style lang="scss">
+  .search {
+    .ivu-select {
+      .ivu-select-selection {
+        background-color: #0066ff;
+        border-color: #0066ff;
+        color: #fff;
+      }
+      .ivu-select-arrow {
+        color: #fff;
+      }
+    }
+    input {
+      background-color: #2a4a98;
+      border-color: #0066ff;
+      color: #fff;
+    }
+    .ivu-input-group-append {
+      background-color: #0066ff;
+      border-color: #0066ff;
+      color: #fff;
+      cursor: pointer;
+    }
   }
 </style>
 
