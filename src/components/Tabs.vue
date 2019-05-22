@@ -28,7 +28,7 @@ export default {
         },
         {
           title: '公示',
-          value: '2'
+          value: 'publicity'
         },
         {
           title: '督办代办',
@@ -77,7 +77,7 @@ export default {
     height: 55px;
     margin: 0 15px;
     background-image: url('../assets/tab.png');
-    background-size: cover;
+    background-size: 100% 100%;
     text-align: center;
     color: #fff;
     font-size: 28px;
@@ -87,12 +87,12 @@ export default {
 
   .tab:hover {
     background-image: url('../assets/tab-active.png');
-    background-size: cover;
+    background-size: 100% 100%;
   }
 
   .active {
     background-image: url('../assets/tab-active.png');
-    background-size: cover;
+    background-size: 100% 100%;
   }
 
 </style>

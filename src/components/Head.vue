@@ -1,28 +1,27 @@
 <template>
   <div class="head">
-    <div class="user">
-      <Avatar class="avatar" size="large" :src="require('../assets/user.png')" />
+    <p>四川省交通运输厅道路运输管理综合业务门户</p>
+    <Avatar class="avatar" size="large" :src="require('../assets/user.png')" />
 
-      <div class="nameInfo">
-        欢迎<span class="name"> 彭局长 </span>！<span class="password">(修改密码)</span>
-      </div>
-
-      <div class="ring"></div>
-
-      <div class="search">
-        <Input v-model="value12">
-          <Select v-model="select1" slot="prepend" placeholder="公示" style="width: 100px">
-              <Option value="0">公示信息</Option>
-              <Option value="1">专题</Option>
-              <Option value="2">名单</Option>
-          </Select>
-          <Icon type="ios-search" slot="append" />
-        <!-- eslint-disable-next-line -->
-        </Input>
-      </div>
-
-      <Icon type="md-power" class="logout"/>
+    <div class="nameInfo">
+      欢迎<span class="name"> 彭局长 </span>！<span class="password">(修改密码)</span>
     </div>
+
+    <div class="ring"></div>
+ 
+    <div class="search">
+      <Input v-model="value12">
+        <Select v-model="select1" slot="prepend" placeholder="公示" style="width: 100px">
+            <Option value="0">公示信息</Option>
+            <Option value="1">专题</Option>
+            <Option value="2">名单</Option>
+        </Select>
+        <Icon type="ios-search" slot="append" />
+      <!-- eslint-disable-next-line -->
+      </Input>
+    </div>
+
+    <Icon type="md-power" class="logout"/>
   </div>
 </template>
 
@@ -47,64 +46,80 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+  $left: 40px;
+  $right: 80px;
   .head {
     height: 80px;
-    min-width: 1900px;
-    /* position: fixed; */
+    min-width: 50rem;
     width: 100%;
-    /* top: 0; */
-    /* right: 0; */
-    /* z-index: 1000; */
     background-image: url('../assets/title.png');
-    background-size: cover;
-  }
+    background-size: 100% 100%;
+    position: relative;
 
-  .user {
-    height: 80px;
-    display: flex;
-    align-items: center;
-  }
+    p {
+      color: #fff;
+      text-align: center;
+      line-height: 80px;
+      font-size: 28px;
+      padding-left: 45px;
+    }
 
-  .avatar {
-    margin-left: 40px;
-  }
+    .avatar {
+      position: absolute;
+      height: 45px;
+      width: 45px;
+      top: 50%;
+      left: $left;
+      transform: translate(0, -50%);
+    }
 
-  .nameInfo {
-    font-size: 30px;
-    color:#fff;
-    margin-left: 30px;
-  }
+    .nameInfo {
+      position: absolute;
+      font-size: 30px;
+      color:#fff;
+      top: 50%;
+      left: $left + 70;
+      transform: translate(0, -50%);
+        .name {
+          color: #02dfe4;
+          font-size: 28px;
+        }
+        .password {
+          font-size: 22px;
+          color: #7e90c1;
+          cursor: pointer;
+        }
+    }
 
-  .name {
-    color: #02dfe4;
-    font-size: 28px;
-  }
+    .ring {
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      left: $left + 410;
+      background-image: url('../assets/ring.png');
+      width: 35px;
+      height: 40px;
+      background-size: 100% 100%;
+      cursor: pointer;
+    }
 
-  .password {
-    font-size: 22px;
-    color: #7e90c1;
-    cursor: pointer;
-  }
+    .search {
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      right: $right + 60;
+    }
 
-  .ring {
-    background-image: url('../assets/ring.png');
-    width: 35px;
-    height: 40px;
-    background-size: cover;
-    margin-left: 35px;
-    cursor: pointer;
-  }
-
-  .search {
-    margin-left: 895px;
-  }
-
-  .logout {
-    margin-left: 150px;
-    color: #00ffff;
-    font-size: 35px;
-    cursor: pointer;
+    .logout {
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      right: $right;
+      color: #00ffff;
+      font-size: 35px;
+      cursor: pointer;
+    }
   }
 </style>
 <style>

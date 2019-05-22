@@ -96,13 +96,6 @@ export default {
 </script>
 
 <style>
-  #app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    min-width: 1900px;
-    overflow-x: auto;
-    background: url('../../assets/bg.png');
-  }
-
   .content {
     margin: 0 45px;
   }

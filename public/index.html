@@ -6,12 +6,33 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="./favicon.ico">
     <title>业务门户</title>
+    <style>
+        #app {
+          background-image: url('./bg.png');
+          background-size: 100% 100%;
+          font-family: 'Avenir', Helvetica, Arial, sans-serif;
+          min-width: 50rem;
+          overflow: auto;
+          height: 100vh;
+        }
+    </style>
   </head>
   <body style="margin:0">
     <noscript>
       <strong>We're sorry but trans doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
     <div id="app"></div>
+    <script>
+      var baseSize = 20
+      function setRem() {
+        var scale = Math.max(document.documentElement.clientWidth, 1200) / 1200
+        document.documentElement.style.fontSize = baseSize * Math.min(scale, 2) + 'px'
+      }
+      setRem()
+      window.onresize = function() {
+        setRem()
+      }
+    </script>
     <!-- built files will be auto injected -->
   </body>
 </html>
