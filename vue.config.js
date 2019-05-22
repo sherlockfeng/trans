@@ -20,6 +20,16 @@ module.exports = {
 
       title: '业务专题',
 
+    },
+    publicity: {
+      entry: 'src/pages/publicity/publicity.js',
+
+      template: 'public/index.html',
+
+      filename: 'publicity.html',
+
+      title: '公示',
+
     }
   }
 }
