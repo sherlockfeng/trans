@@ -36,6 +36,16 @@ module.exports = {
 
       title: '公示',
 
+    },
+    supervision: {
+      entry: 'src/pages/supervision/supervision.js',
+
+      template: 'public/index.html',
+
+      filename: 'supervision.html',
+
+      title: '督办代办',
+
     }
   },
   css: {
