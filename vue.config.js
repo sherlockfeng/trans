@@ -46,6 +46,16 @@ module.exports = {
 
       title: '督办代办',
 
+    },
+    random: {
+      entry: 'src/pages/random/random.js',
+
+      template: 'public/index.html',
+
+      filename: 'random.html',
+
+      title: '双随机',
+
     }
   },
   css: {

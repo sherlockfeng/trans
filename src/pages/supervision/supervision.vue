@@ -104,7 +104,7 @@ export default {
       model2: '',
       model3: '',
       model4: '',
-      modal2: true,
+      modal2: false,
       value6: '',
       value7: '',
       single: 8,

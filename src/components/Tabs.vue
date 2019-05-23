@@ -40,7 +40,7 @@ export default {
         },
         {
           title: '双随机',
-          value: '5'
+          value: 'random'
         },
         {
           title: '专家库',
