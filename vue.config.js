@@ -56,6 +56,16 @@ module.exports = {
 
       title: '双随机',
 
+    },
+    manage: {
+      entry: 'src/pages/manage/manage.js',
+
+      template: 'public/index.html',
+
+      filename: 'manage.html',
+
+      title: '用户管理',
+
     }
   },
   css: {

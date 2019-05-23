@@ -48,7 +48,7 @@ export default {
         },
         {
           title: '用户管理',
-          value: '7'
+          value: 'manage'
         }
       ]
     }

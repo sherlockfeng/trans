@@ -50,7 +50,7 @@
             <div class="row">
               <div class="name">受教育程度：</div>
               <div class="inputs">
-                <Select size="large" v-model="model4" class="select" style="width: 300px">
+                <Select size="large" v-model="model5" class="select" style="width: 300px">
                   <Option v-for="item in eduList" :value="item.value" :key="item.value">{{ item.label }}</Option>
                 </Select>
               </div>
@@ -139,6 +139,7 @@ export default {
       value8: '',
       gender: '男',
       model4: '',
+      model5: '',
       value7: '',
       position: '',
       personId: '',
@@ -286,8 +287,6 @@ export default {
       work: '',
       single: 8,
       total: 386,
-      title: '',
-      writer: '',
       typelist: [
         {
             value: 'personId',
