@@ -35,6 +35,56 @@
         <p>共{{total}}页</p>
       </div>
     </div>
+    <div class="=modal2">
+      <Modal v-model="modal2" 
+        :closable="false"
+        class-name="vertical-center-modal"
+      >
+        <div class="modal-contant">
+            <div class="titles">
+              <p class="selected">{{titleList[0]}}</p>
+              <p class="notSelected" @click="change">{{titleList[1]}}</p>
+              <div class="record"></div>
+              <div class="close" @click="close"></div>
+            </div>
+            <div class="contents">
+              <p class="name">督办事项</p>
+              <div class="input">
+                <Input v-model="value6" type="textarea" :autosize="{minRows: 2,maxRows: 4}" placeholder="请填写具体的相关事项" />
+              </div>
+              <p class="name">督办内容</p>
+              <div class="input">
+                <Input v-model="value7" type="textarea" :autosize="{minRows: 2,maxRows: 4}" placeholder="请填写具体的相关内容" />
+              </div>
+              <div class="selects">
+                <div class="select-item">
+                  <p class="name">承办单位</p>
+                  <div>
+                    <Select v-model="model1" style="width:150px">
+                      <Option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</Option>
+                  </Select>
+                  </div>
+                </div>
+                <div class="select-item">
+                  <p class="name">协办单位</p>
+                  <div>
+                    <Select v-model="model2" style="width:150px">
+                      <Option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</Option>
+                  </Select>
+                  </div>
+                </div>
+              </div>
+              <div class="data">
+                <p class="name">截止时间</p>
+                <DatePicker type="date" placeholder="请选择时间" size="large" placement="top" style="width: 300px"></DatePicker>
+              </div>
+              <div class="confirms">
+                <Button size="large" class="confirm" @click="confirm">确认</Button>
+              </div>
+            </div>
+        </div>
+      </Modal>
+    </div>
   </div>
 </template>
 
@@ -50,8 +100,13 @@ export default {
   },
   data: () => {
     return {
+      model1: '',
+      model2: '',
       model3: '',
       model4: '',
+      modal2: true,
+      value6: '',
+      value7: '',
       single: 8,
       total: 386,
       supervisiontype: [
@@ -166,22 +221,56 @@ export default {
           unit: '客运管理处',
           status: '已办结'
         }
-      ]
+      ],
+      titleList: ['发起督办', '督办记录'],
+      cityList: [
+        {
+            value: 'chengdu',
+            label: '成都运管处'
+        },
+        {
+            value: 'chengdu1',
+            label: '成都1运管处'
+        },
+        {
+            value: 'chengdu2',
+            label: '成都2运管处'
+        },
+        {
+            value: 'chengdu3',
+            label: '成都3运管处'
+        },
+        {
+            value: 'chengdu4',
+            label: '成都4运管处'
+        }
+    ],
     };
   },
   methods: {
     apply() {
-
+      this.modal2 = true;
     },
     search() {
 
+    },
+    close() {
+      this.modal2 = false;
+    },
+    change() {
+      let [a, b] = this.titleList;
+      this.titleList = [b, a];
+    },
+    confirm() {
+      this.close();
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-
+  $left: 80px;
+  $right: 25px;
   .content-all {
     margin: 30px 45px 50px;
     min-width: 1110px;
@@ -250,6 +339,76 @@ export default {
     margin-bottom: 20px;
     p {
       margin-right: 20px;
+    }
+  }
+
+  .modal-contant {
+    background-image: url('../../assets/dubanModal.png');
+    background-size: 100% 100%;
+    width: 560px;
+    max-height: 650px;
+    margin: 0;
+    .titles {
+      position: relative;
+      height: 60px;
+      p {
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        font-size: 24px;
+      }
+      div {
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+      }
+      .selected {
+        color: #fff;
+        left: $left;
+      }
+      .notSelected {
+        color: #66fbf9;
+        cursor: pointer;
+        left: $left + 210;
+      }
+      .record {
+        background-image: url('../../assets/dubanNot.png');
+        background-size: 100% 100%;
+        width: 25px;
+        height: 18px;
+        right: $right + 120;
+      }
+      .close {
+        background-image: url('../../assets/dubanC.png');
+        background-size: 100% 100%;
+        width: 30px;
+        height: 30px;
+        right: $right;
+        cursor: pointer;
+      }
+    }
+    .contents {
+      padding: 50px 55px 30px 55px;
+      .name {
+        color: #fff;
+        font-size: 22px;
+        margin-bottom: 10px;
+      }
+      .input {
+        margin-bottom: 20px;
+      }
+      .selects {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+      }
+      .confirms {
+        text-align: center;
+        .confirm {
+          width: 100px;
+          margin-top: 20px;
+        }
+      }
     }
   }
 </style>
@@ -356,6 +515,50 @@ export default {
       background-color: #001c46;
       border-color: #001c46;
       color: #fff;
+    }
+  }
+}
+
+.vertical-center-modal {
+  .ivu-modal {
+    width: 560px !important;
+    .ivu-modal-content {
+      background-color: #091f32;
+      .ivu-modal-body {
+        padding: 0;
+        textarea {
+          background-color: #091d2e;
+          border-color: #091d2e;
+          color: #fff;
+        }
+        input {
+          background-color: #091d2e;
+          border-color: #091d2e;
+          color: #fff;
+        }
+        button {
+          background: #003e77;
+          border: none;
+          color: #fff;
+          &:hover {
+            background: #003e77;
+            border: none;
+          }
+        }
+        .ivu-select {
+          .ivu-select-selection {
+            background-color: #091d2e;
+            border-color: #091d2e;
+            color: #fff;
+          }
+          .ivu-select-arrow {
+            color: #fff;
+          }
+        }
+      }
+      .ivu-modal-footer {
+        display: none;
+      }
     }
   }
 }
