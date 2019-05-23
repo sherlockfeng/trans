@@ -6,7 +6,7 @@
       <div class="bottom">
         <div class="left">
           <div class="section" v-for="(item, index) in sectionList" :key="index">
-            <div class="title">
+            <div class="title-left">
               <p>{{item.title}}</p>
             </div>
             <div class="section-content" :style="{backgroundImage:'url(' + item.imgUrl + ')'}"></div>
@@ -95,7 +95,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
   .content {
     margin: 0 45px;
   }
@@ -118,12 +118,18 @@ export default {
     margin-bottom: 30px;
   }
 
-  .title {
+  .title-left {
     background-image: url('../../assets/section-title.png');
     height: 30px;
     background-size: 100% 100%;
     width: 210px;
     margin-bottom: 10px;
+    p {
+      font-size: 22px;
+      color: #fff;
+      line-height: 30px;
+      margin-left: 40px;
+    }
   }
 
   .title p {
