@@ -121,7 +121,7 @@ export default {
   .title {
     background-image: url('../../assets/section-title.png');
     height: 30px;
-    background-size: contain;
+    background-size: 100% 100%;
     width: 210px;
     margin-bottom: 10px;
   }
@@ -135,7 +135,7 @@ export default {
 
   .section-content {
     height: 230px;
-    background-size: contain;
+    background-size: 100% 100%;
   }
 
   .left .section:last-child .section-content {
@@ -168,5 +168,6 @@ export default {
     width: 420px;
     height: 200px;
     margin-bottom: 16px;
+    background-size: 100% 100%;
   }
 </style>
