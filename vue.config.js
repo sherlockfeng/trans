@@ -66,6 +66,16 @@ module.exports = {
 
       title: '用户管理',
 
+    },
+    login: {
+      entry: 'src/pages/login/login.js',
+
+      template: 'public/index.html',
+
+      filename: 'login.html',
+
+      title: '登录',
+
     }
   },
   css: {

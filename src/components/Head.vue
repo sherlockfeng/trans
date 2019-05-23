@@ -21,7 +21,7 @@
       </Input>
     </div>
 
-    <Icon type="md-power" class="logout"/>
+    <Icon type="md-power" class="logout" @click="exit"/>
   </div>
 </template>
 
@@ -41,6 +41,11 @@ export default {
     return {
       value12: '公示',
       select1: '0'
+    }
+  },
+  methods: {
+    exit() {
+      document.location = './login.html';
     }
   }
 }

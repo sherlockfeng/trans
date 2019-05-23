@@ -109,6 +109,7 @@ export default {
     return {
       companyNum: '',
       indexName: '',
+      companyNameSearch: '',
       data2: [
         {
             title: '四川省交通运输厅',
@@ -189,7 +190,7 @@ export default {
       position: '',
       phone: '',
       personId: '',
-      isAdd: true,
+      isAdd: false,
       columns1: [
           {
             title: '序号',
