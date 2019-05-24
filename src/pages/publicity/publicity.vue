@@ -17,7 +17,7 @@
           <div class="row">
             <div class="title">时间：</div>
             <div class="inputs">
-              <DatePicker type="date" placeholder="请选择时间" size="large" placement="bottom" style="width: 300px"></DatePicker>
+              <DatePicker type="date" placeholder="请选择时间" size="large" placement="top" style="width: 300px"></DatePicker>
             </div>
           </div>
           <div class="row">
@@ -137,6 +137,7 @@ export default {
           vertical-align: top;
           .markdown-body {
             min-height: 300px;
+            z-index: 1;
           }
         }
       }

@@ -289,6 +289,7 @@ export default {
       padding: 30px 35px 35px 35px;;
       position: relative;
       height: 60px;
+      z-index: 1000;
       .left {
         position: absolute;
         top: 50%;
