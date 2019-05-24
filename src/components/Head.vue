@@ -103,7 +103,7 @@ export default {
       this.personInfo = false;
     },
     confirm() {
-      this.cancle()
+      this.cancle();
     }
   }
 }

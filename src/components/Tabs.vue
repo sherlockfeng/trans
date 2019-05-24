@@ -1,7 +1,9 @@
 <template>
   <div class="tabs">
-    <div class="tab" v-for="(item, index) in tabs" :key="index"  :class="{ active: item.value === select }">
-      <div class="parent-tab" @click="goto(item.value)">{{item.title}}</div>
+    <div class="tab" v-for="(item, index) in tabs" :key="index">
+      <div class="parent-tab" @click="goto(item.value)" :class="{ active: item.value === select }">
+        {{item.title}}
+      </div>
       <div class='child-tabs'>
         <div v-for="(childItem, i) in item.nextTabs" :key="i" class="child-tab-item" @click="goto(childItem.value)">
           {{childItem.title}}
