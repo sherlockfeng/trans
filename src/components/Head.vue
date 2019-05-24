@@ -86,7 +86,7 @@ export default {
     return {
       value12: '公示',
       select1: '0',
-      personInfo: true,
+      personInfo: false,
       gender: '男',
       position: '',
       name: ''
