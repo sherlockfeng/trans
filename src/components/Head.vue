@@ -26,6 +26,7 @@
 </template>
 
 <script>
+// import {Avatar, Option, Select, Input, Icon} from 'iview';
 
 export default {
   name: 'Head',
