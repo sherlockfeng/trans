@@ -31,7 +31,7 @@
             <div class="inputs">
               <Upload action="//jsonplaceholder.typicode.com/posts/">
                 <Button size="large">上传附件</Button>
-            </Upload>
+              </Upload>
             </div>
           </div>
           <div class="row">
