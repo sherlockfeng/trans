@@ -22,6 +22,7 @@
     </div>
 
     <Icon type="md-power" class="logout" @click="exit"/>
+    
   </div>
 </template>
 
