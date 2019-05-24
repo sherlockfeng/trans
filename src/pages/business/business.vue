@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" style="minWidth: 1200px">
     <Head></Head>
     <div class=content>
       <Tabs select="business"></Tabs>
