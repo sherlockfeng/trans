@@ -1,5 +1,5 @@
 <template>
-  <div id="app" style="minWidth: 1200px">
+  <div id="app" style="minWidth: 1300px">
     <Head></Head>
     <div class='content business'>
       <Tabs select="business"></Tabs>
@@ -493,7 +493,7 @@ export default {
     },
     drawPieChartOne() {
       let myChart = echarts.init(document.getElementById("pieOne"));
-      let option = option = {
+      let option = {
           title : {
             show: false
           },
@@ -533,7 +533,7 @@ export default {
     },
     drawPieChartTwo() {
       let myChart = echarts.init(document.getElementById("pieTwo"));
-      let option = option = {
+      let option = {
           title : {
             show: false
           },
@@ -664,7 +664,7 @@ export default {
                 .work-value {
                   p {
                     color: #f4b822;
-                    font-size: 20px;
+                    font-size: 30px;
                     font-weight: 700;
                     span {
                       color: #fff;

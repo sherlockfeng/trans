@@ -1,5 +1,5 @@
 <template>
-  <div id="app" style="minWidth: 1200px">
+  <div id="app" style="minWidth: 1300px">
     <Head></Head>
     <div class="login-content">
       <div class="login-type">
@@ -23,7 +23,7 @@
           <Input v-model="username" size="large" placeholder="用户名" />
         </div>
         <div class="input">
-          <Input v-model="password" size="large" placeholder="密码" />
+          <Input v-model="password" type="password" size="large" placeholder="密码" />
         </div>
         <div class="input verify">
           <Input v-model="verify" size="large" placeholder="验证码" />
@@ -47,7 +47,7 @@ export default {
   data: () => {
     return {
       type: 'ukey',
-      identify: '省CA系统认真蓝牙KEY证书',
+      identify: '省CA系统认证蓝牙KEY证书',
       verify: '',
       password: '',
       username: ''
@@ -64,7 +64,8 @@ export default {
   created() {
     this.axios
       .get('https://api.coindesk.com/v1/bpi/currentprice.json')
-      .then(response => (console.log(response)))
+      // eslint-disable-next-line
+      .then(response => {});
   
   },
 };

@@ -121,6 +121,7 @@ export default {
           margin-bottom: 1px;
           position: relative;
           z-index: 1000;
+          font-size: 24px;
           &:hover {
             background-color: #003e78;
           }
