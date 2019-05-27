@@ -228,7 +228,7 @@ export default {
           {
             title: '具体操作',
             key: 'action',
-            width: 220,
+            width: 200,
             render: (h) => {
               return h('div', [
                 h('Button', {

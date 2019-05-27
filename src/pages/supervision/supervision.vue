@@ -306,11 +306,6 @@ export default {
         }
       }
       .right {
-        // position: absolute;
-        // top: 50%;
-        // transform: translate(0, -50%);
-        // right: 35px;
-        // margin-right: 35px;
         .title-right {
           display: inline-block;
           color: #fff;
