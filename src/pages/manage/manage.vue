@@ -223,7 +223,8 @@ export default {
           },
           {
             title: '上机机构代码',
-            key: 'topCompanyNum'
+            key: 'topCompanyNum',
+            // width: 160
           },
           {
             title: '具体操作',
@@ -417,7 +418,7 @@ export default {
     .right-content {
       min-width: 1100px;
       margin-bottom: 20px;
-      width: 1300px;
+      width: 1400px;
       margin-top: 30px;
       background-color: #152543;
       .handles {
