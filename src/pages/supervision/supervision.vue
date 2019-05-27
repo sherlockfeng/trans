@@ -287,13 +287,12 @@ export default {
     }
     .handles {
       padding: 30px 35px 35px 35px;;
-      position: relative;
       height: 60px;
       z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       .left {
-        position: absolute;
-        top: 50%;
-        transform: translate(0, -50%);
         .select {
           margin-left: 30px;
           width:150px;
@@ -307,10 +306,11 @@ export default {
         }
       }
       .right {
-        position: absolute;
-        top: 50%;
-        transform: translate(0, -50%);
-        right: 35px;
+        // position: absolute;
+        // top: 50%;
+        // transform: translate(0, -50%);
+        // right: 35px;
+        // margin-right: 35px;
         .title-right {
           display: inline-block;
           color: #fff;

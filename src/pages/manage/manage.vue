@@ -195,7 +195,7 @@ export default {
           {
             title: '序号',
             key: 'id',
-            width: 60,
+            width: 80,
           },
           {
             title: '机构名称',
@@ -228,7 +228,7 @@ export default {
           {
             title: '具体操作',
             key: 'action',
-            width: 160,
+            width: 220,
             render: (h) => {
               return h('div', [
                 h('Button', {
