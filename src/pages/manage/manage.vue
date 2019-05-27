@@ -588,6 +588,7 @@ export default {
       border: none;
       .ivu-table{
         color: #fff;
+        background-color: #07163e;
         &:before {
           background-color: #07163e;
         }

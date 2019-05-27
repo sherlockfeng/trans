@@ -456,7 +456,7 @@ export default {
       border: none;
       .ivu-table{
         color: #fff;
-        background-color: #09243a;
+        background-color: #07163e;
         &:before {
           background-color: #07163e;
           border-color: #07163e;
