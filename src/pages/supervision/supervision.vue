@@ -456,13 +456,16 @@ export default {
       border: none;
       .ivu-table{
         color: #fff;
+        background-color: #09243a;
         &:before {
           background-color: #07163e;
           border-color: #07163e;
+          width: 0;
         }
         &:after {
           background-color: #07163e;
           border-color: #07163e;
+          width: 0;
         }
         th {
           background-color: #07163e;
