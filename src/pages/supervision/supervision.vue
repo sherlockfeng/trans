@@ -458,9 +458,11 @@ export default {
         color: #fff;
         &:before {
           background-color: #07163e;
+          border-color: #07163e;
         }
         &:after {
           background-color: #07163e;
+          border-color: #07163e;
         }
         th {
           background-color: #07163e;
