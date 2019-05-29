@@ -136,7 +136,9 @@ module.exports = {
           }
         }
       }
-      // config.plugins.push(new BundleAnalyzerPlugin());
+    }
+    else {
+      config.plugins.push(new BundleAnalyzerPlugin());
     }
     config.externals = {
       "echarts": "echarts"
