@@ -574,8 +574,6 @@ import Tabs from "../../components/Tabs.vue";
 import Card from "../../components/Card.vue";
 import CircleProgress from "../../components/Circles.vue";
 import echarts from "echarts";
-import HighCharts from "highcharts";
-import sichuan from "../../components/sichuan.js";
 
 export default {
   name: "app",
@@ -682,9 +680,6 @@ export default {
         }
       ]
     };
-  },
-  created() {
-    HighCharts.maps["cn/sichuan"] = sichuan;
   },
   mounted() {
     this.drawChart();

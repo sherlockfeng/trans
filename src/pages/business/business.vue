@@ -279,7 +279,6 @@
 import Head from '../../components/Head.vue'
 import Tabs from '../../components/Tabs.vue'
 import SectionCard from '../../components/SectionCard.vue'
-import {Icon} from 'iview';
 import echarts from "echarts";
 
 export default {
@@ -287,7 +286,6 @@ export default {
   components: {
     Head,
     Tabs,
-    Icon,
     'section-card': SectionCard
   },
    data: () => {
