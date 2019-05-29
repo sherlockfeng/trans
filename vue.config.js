@@ -87,8 +87,7 @@ module.exports = {
       filename: 'login.html',
 
       title: '登录',
-
-      chunks: ['vendors', 'commons', 'async-commons', 'login']
+      chunks: ['vendors', 'commons', 'async-commons', 'manage']
     }
   },
   css: {
@@ -137,8 +136,7 @@ module.exports = {
           }
         }
       }
-      config.plugins.push(new BundleAnalyzerPlugin());
-
+      // config.plugins.push(new BundleAnalyzerPlugin());
     }
     config.externals = {
       "echarts": "echarts"
