@@ -574,6 +574,7 @@ import Tabs from "../../components/Tabs.vue";
 import Card from "../../components/Card.vue";
 import CircleProgress from "../../components/Circles.vue";
 import echarts from "echarts";
+import sichuan from "../../components/sichuan.js";
 
 export default {
   name: "app",
@@ -881,8 +882,7 @@ export default {
           {
             data: data,
             name: "随机数据",
-            // eslint-disable-next-line
-            mapData: Highcharts.maps["cn/sichuan"],
+            mapData: sichuan,
             joinBy: "name", // 根据 name 属性进行关联
             showInLegend: false,
             borderColor: '#3baae5'
