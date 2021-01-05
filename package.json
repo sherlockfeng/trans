@@ -9,7 +9,7 @@
     "analyz": "npm_config_report=true npm run build"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "babel-plugin-import": "^1.11.2",
     "core-js": "^2.6.5",
     "iview": "^3.0.1",
